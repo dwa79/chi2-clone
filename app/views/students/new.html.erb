@@ -3,31 +3,32 @@
   <div class="newp">
     <%= f.label :name, "姓名:" %>
     <%= f.text_field :name %>
-  </div>
+  </div><br>
+  
   <div class="newp">
     <%= f.label :weight, "体重（斤）:" %>
     <%= f.text_field :weight %>
-  </div>
+  </div><br>
   <div class="newp">
     <%= f.label :height, "身高（厘米）:" %>
     <%= f.text_field :height %>
-  </div>
+  </div><br>
   <div class="newp">
     <%= f.label :color, "挑选你的颜色（请输入英文：red,gold,purple...\n或者查看http://www.114la.com/other/rgb.htm选择颜色代码):" %>
     <%= f.text_field :color %>
-  </div>    
+  </div>  <br>  
   <div class="newp">    
     <%= f.label :gpa, "GPA:" %>
     <%= f.text_field :gpa %>
-  </div>    
+  </div>   <br> 
   <div class="newp">    
     <%= f.label :description, "自我介绍" %>
     <%= f.text_area :description %>
-  </div>    
+  </div>    <br>
   <div class="newp">    
     <%= f.label :sex, "性别" %>
     <%= f.text_field :sex %>
-  </div>    
+  </div>   <br> 
 
     <%= f.submit "完成" %>
 <% end %>

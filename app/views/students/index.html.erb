@@ -5,14 +5,14 @@
 <% @students.each do |s| %>
     <tr>
         <td style="font-size:20px;color:<%= s.color %>"><%= s.name %></td>
-        <td><%= link_to '查看', :controller => 'students', :action => 'show', :id => s %></td>
+        <td><%= link_to '查看他/她的资料', :controller => 'students', :action => 'show', :id => s %></td>
         <td><%= link_to '更改', :controller => 'students', :action => 'edit', :id => s %></td>
         <td><%= link_to '删除', :controller => 'students', :action => 'destroy', :id => s %></td>
     </tr>
    
 <% end %>
 </table>
- <%= link_to '添加学生资料', :controller => 'students', :action => 'new' %>
+ <%= link_to '学生资料添加', :controller => 'students', :action => 'new' %>
 
 <br>
 <br>
@@ -22,7 +22,7 @@
 <br>
 <br>
 <br>
-
+<p>一下长方形为您的身高体重模型（底为体重，高为身高）：</p>
 <div id="rec">
     <% @students.each do |p| %>
     

@@ -1,39 +1,39 @@
 <%= form_for @student, :url => { :controller => 'students', :action => 'update', :id=>@student } do |f| %>
   <div class="edl">
-    <%= f.label :name, "Name:" %>
+    <%= f.label :name, "姓名:" %>
     <%= f.text_field :name %>
   </div>
   <br>
   <div class="edl">
-    <%= f.label :weight, "Weight:" %>
-    <%= f.text_area :weight %>
+    <%= f.label :weight, "体重:" %>
+    <%= f.text_field :weight %>
   </div>
   <br>
   <div class="edl">
-    <%= f.label :height, "Height:" %>
-    <%= f.text_area :height %>
+    <%= f.label :height, "身高:" %>
+    <%= f.text_field :height %>
   </div>
   <br>
   <div class="edl">
-    <%= f.label :color, "Color:" %>
-    <%= f.text_area :color %>
+    <%= f.label :color, "颜色" %>
+    <%= f.text_field :color %>
   </div>
   <br>
   <div class="edl">    
     <%= f.label :gpa, "GPA:" %>
-    <%= f.text_area :gpa %>
+    <%= f.text_field :gpa %>
   </div>  
   <br>
   <div class="edl">    
-    <%= f.label :description, "Description:" %>
+    <%= f.label :description, "自我介绍:" %>
     <%= f.text_area :description %>
   </div> 
   <br>
   <div class="edl">    
-    <%= f.label :sex, "Sex:" %>
+    <%= f.label :sex, "性别:" %>
     <%= f.text_area :sex %>
   </div> 
   <br>
 
-    <%= f.submit "Update" %>
+    <%= f.submit "更新" %>
 <% end %>

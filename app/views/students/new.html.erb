@@ -1,19 +1,19 @@
 
 <%= form_for @student, :url => { :controller => 'students', :action => 'create' } do |f| %>
   <div class="newp">
-    <%= f.label :name, "Name:" %>
+    <%= f.label :name, "姓名:" %>
     <%= f.text_field :name %>
   </div>
   <div class="newp">
-    <%= f.label :weight, "Weight:" %>
+    <%= f.label :weight, "体重:" %>
     <%= f.text_area :weight %>
   </div>
   <div class="newp">
-    <%= f.label :height, "Height:" %>
+    <%= f.label :height, "身高:" %>
     <%= f.text_area :height %>
   </div>
   <div class="newp">
-    <%= f.label :color, "Color:" %>
+    <%= f.label :color, "挑选你的颜色（请输入英文：red,gold,purple...或者查看http://www.114la.com/other/rgb.htm选择颜色代码):" %>
     <%= f.text_area :color %>
   </div>    
   <div class="newp">    
@@ -21,13 +21,13 @@
     <%= f.text_area :gpa %>
   </div>    
   <div class="newp">    
-    <%= f.label :description, "Description" %>
+    <%= f.label :description, "自我介绍" %>
     <%= f.text_area :description %>
   </div>    
   <div class="newp">    
-    <%= f.label :sex, "Sex" %>
+    <%= f.label :sex, "性别" %>
     <%= f.text_area :sex %>
   </div>    
 
-    <%= f.submit "Create" %>
+    <%= f.submit "完成" %>
 <% end %>

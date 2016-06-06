@@ -1,18 +1,18 @@
-<h1>Student List</h1>
+<h1>学生资料分享库</h1>
 <%= javascript_include_tag :all %>
 
 <table style="border: 1px solid black;border-collapse: collapse;width: 98.5%;">
 <% @students.each do |s| %>
     <tr>
         <td style="font-size:20px;color:<%= s.color %>"><%= s.name %></td>
-        <td><%= link_to 'Information', :controller => 'students', :action => 'show', :id => s %></td>
-        <td><%= link_to 'Edit', :controller => 'students', :action => 'edit', :id => s %></td>
-        <td><%= link_to 'Delete', :controller => 'students', :action => 'destroy', :id => s %></td>
+        <td><%= link_to '查看', :controller => 'students', :action => 'show', :id => s %></td>
+        <td><%= link_to '更改', :controller => 'students', :action => 'edit', :id => s %></td>
+        <td><%= link_to '删除', :controller => 'students', :action => 'destroy', :id => s %></td>
     </tr>
    
 <% end %>
 </table>
- <%= link_to 'New Student', :controller => 'students', :action => 'new' %>
+ <%= link_to '添加学生资料', :controller => 'students', :action => 'new' %>
 
 <br>
 <br>

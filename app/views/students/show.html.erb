@@ -20,6 +20,40 @@
 				
 			</tr>
 </table>
+<% @count=0 %>
 
+<% if @student.weight.blank? %>
+  <h4>请输入你的体重啊！</h4>
+  <% @count=@count +1 %>
+  <% end %> 
+<% if @student.height.blank? %>
+  <h4>请输入你的身高啊！</h4>
+  <% @count=@count +1 %>
+  <% end %> 
+<% if @student.color.blank? %>
+  <h4>请输入你喜欢的颜色（英语）啊！</h4>  
+  <% @count=@count +1 %>
+  <% end %> 
+<% if @student.gpa.blank? %>
+  <h4>请输入你的gpa啊！</h4> 
+  <% @count=@count +1 %>
+  <% end %> 
+<% if @student.description.blank? %>
+  <h4>请输入你的自我介绍啊！</h4>  
+  <% @count=@count +1 %>
+  <% end %> 
+<% if @student.sex.blank? %>
+  <h4>请输入你的性别啊！</h4>  
+  <% @count=@count +1 %>
+
+<% end %> 
+<% if @count==6 %>
+  <h4>你除了姓名啥都没输啊哥门儿！这有毛用啊</h4>
+  <%= link_to '补充完整您的信息', :controller => 'students', :action => 'edit', :id => @student.id %>
+  <% end %> 
+  
+<% if @count==0 %>
+  <h4>您的信息完整。</h4>  
+<% end %> 
 
 <P><%= link_to '返回主页', :controller => 'students', :action => 'index' %></P>

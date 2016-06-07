@@ -26,11 +26,12 @@
 <div id="rec">
     <% @students.each do |p| %>
     
-    <div class="rec" style="width:<%=p.weight %>px;height:<%= p.height %>px;display:inline-block;border:1px solid #000;">
+    <div class="rec" style="width:<%=p.weight %>px;height:<%= p.height %>px;display:inline-block;border:5px solid #000;border-color:<%= p.color %>;">
         
         
           <p style="color:<%= p.color %>;text-align:center"><%= p.name %></p>
           <p style="text-align:center"><%= p.gpa %></p>
+          
      
         
     </div>

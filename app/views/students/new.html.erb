@@ -14,9 +14,9 @@
     <%= f.text_field :height %>
   </div><br><br><br>
   <div class="newp">
-    <%= f.label :color, "挑选你的颜色（请输入英文：red,gold,purple...\n或者查看http://www.114la.com/other/rgb.htm选择颜色代码):" %>
+    <%= f.label :color, "挑选你的颜色（请输入英文：red,gold,purple...\n或者查看颜色代码):" %>
     <%= f.text_field :color %>
-  </div>  <br>  <br><br>
+  </div>  <br> <p style="text-align:center;color:#20B2AA">颜色代码:<%= link_to "点击这里", "", :onclick => "col();" %>(记得带上"#"符号)</p> <br><br>
   <div class="newp">    
     <%= f.label :gpa, "GPA:" %>
     <%= f.text_field :gpa %>

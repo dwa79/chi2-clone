@@ -19,6 +19,8 @@
     <%= f.text_field :color %>
   </div>
   <br>
+  <p style="text-align:center;color:#20B2AA">颜色代码:<%= link_to "点击这里", "", :onclick => "col();" %>(记得带上"#"符号)</p>
+  <br>
   <div class="edl">    
     <%= f.label :gpa, "GPA:" %>
     <%= f.text_field :gpa %>

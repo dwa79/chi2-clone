@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+function col(){
+	window.open("http://www.114la.com/other/rgb.htm");
+}
+function calculator(){
+	window.open("https://happy-pig.herokuapp.com/calculator.html");
+}
+function dev(){
+    window.alert("Developer Info: \nName: Di Wang(Eddie)\nCurrently studying at: Simon Fraser University\nEmail: dwa79@sfu.ca\nStudent Number: 301257741\nTel: 778-892-3858(Canada)\n\nFeel free to contact me if you have further questions!\n\n");
+}

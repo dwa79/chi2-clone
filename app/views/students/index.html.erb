@@ -1,5 +1,15 @@
 <h1>学生资料分享库 v1.4</h1>
-<%= javascript_include_tag :all %>
+
+
+<div>
+    <button type="button" class="button1" <%= link_to "制作人", "",:onclick=>"dev();" %></button>
+        
+    <button type="button" class="button1" <%= link_to "分数计算小助手", "",:onclick=>"calculator();" %></button>
+    
+    <p style="float: right;margin-right:10px;color:orange;display:inline-block">更多详情请查看:</p>
+    
+    
+</div>
 
 <table style="border: 1px solid black;border-collapse: collapse;width: 98.5%;">
 <% @students.each do |s| %>

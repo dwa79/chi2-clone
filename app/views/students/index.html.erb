@@ -4,7 +4,7 @@
 <table style="border: 1px solid black;border-collapse: collapse;width: 98.5%;">
 <% @students.each do |s| %>
     <tr>
-        <td style="font-size:20px;color:<%= s.color %>"><%= s.name %></td>
+        <td style="font-size:28px;color:<%= s.color %>"><%= s.name %></td>
         <td><%= link_to '查看他/她的资料', :controller => 'students', :action => 'show', :id => s %></td>
         <td><%= link_to '更改', :controller => 'students', :action => 'edit', :id => s %></td>
         

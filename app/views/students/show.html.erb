@@ -1,4 +1,6 @@
 <h2><%= @student.name %>----个人信息</h2>
+
+
 <table style="border: 1px solid black;border-collapse: collapse;width: 98.5%;">
 			<tr>
 				<th>姓名</th>
@@ -55,5 +57,5 @@
 <% if @count==0 %>
   <h4>您的信息完整。</h4>  
 <% end %> 
-
+<p></p><%= link_to '删除此人', :controller => 'students', :action => 'destroy', :id => @student.id %></p>
 <P><%= link_to '返回主页', :controller => 'students', :action => 'index' %></P>

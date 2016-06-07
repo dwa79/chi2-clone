@@ -47,6 +47,25 @@ h2{
     background-color: #004d00;
     color: white;
 }
+.button2{
+	background-color: pink;
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 7px;
+    float: right;
+    cursor: pointer;
+    margin-top:12px;
+    margin-right: 12px;
+}
+.button2:hover {
+    background-color: #ffff00;
+    color: black;
+}
 h4{
     color:red;
     border: 1px solid black;

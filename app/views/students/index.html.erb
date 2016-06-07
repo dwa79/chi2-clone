@@ -19,12 +19,40 @@
         <td style="font-size:22px;color:<%= s.color %>"><%= s.name %></td>
         <td><%= link_to '查看他/她的资料', :controller => 'students', :action => 'show', :id => s %></td>
         <td><%= link_to '更改', :controller => 'students', :action => 'edit', :id => s %></td>
-        
+
     </tr>
    
 <% end %>
 </table>
  <%= link_to '学生资料添加', :controller => 'students', :action => 'new' %>
+ <br>
+ <br>
+<p>总共<%= @students.count %>人参与</p>
+
+<% @h=0 %>
+<% @w=0 %>
+<% @ratio=0 %>
+<% @students.each do |d| %>
+    <% if d.weight.present? && d.height.present? %>
+        <% @h=@h + d.height %>
+        <% @w=@w + d.weight %>
+    <% end %>
+
+
+<% end %>
+<p><%= @students.count %>个人的总身高<%= @h %>cm</p>
+<p><%= @students.count %>个人的总体重<%= @w %>公斤</p>
+<p>身高/体重比:<%= @h/@w %></p>
+<% @ratio=@h/@w %>
+<% if @ratio>1.7 %>
+    <p>看来这帮好家伙有点胖!😡</p>
+<% elsif @ratio<1.3 %>
+    <p>看来这帮好家伙有点瘦!😆</p>
+<% else %>
+    <p>看来这帮好家伙身材还行!😄</p>
+<% end %>
+
+
 
 <br>
 <br>

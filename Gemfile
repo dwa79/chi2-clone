@@ -14,7 +14,7 @@ group :development, :test do
   gem 'byebug',      '3.4.0'
   gem 'web-console', '2.0.0.beta3'
   gem 'spring',      '1.1.3'
-end
+endbun
 
 group :production do
   gem 'pg',             '0.17.1'

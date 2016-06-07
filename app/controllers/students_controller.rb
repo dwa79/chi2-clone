@@ -3,11 +3,13 @@ class StudentsController < ApplicationController
     #get /students
     def index
         @students = Student.all
+
     end
     
     #get /students/show/:id
     def show
         @student = Student.find(params[:id])
+
         
         @page_title = @student.name
     end

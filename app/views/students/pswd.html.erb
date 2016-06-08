@@ -3,7 +3,7 @@
 
   <div class="newp">
     <%= f.label :backup, "请输入您的密码:" %>
-    <%= f.text_field :backup, :autocomplete => :off %>
+    <%= f.text_field :backup, :autocomplete => :off, input_html: {autocomplete: 'off'} %>
   </div><br><br><br>
   <%= f.submit "确认" %>
 <% end %>

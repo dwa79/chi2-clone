@@ -1,0 +1,11 @@
+
+<% if @student.backup == @student.password %>
+    <% @student.backup = nil %>
+    <p>密码正确！</p>
+    <p><%= link_to '现在去更新', :controller => 'students', :action => 'edit', :id => @student %></p>
+<% else %>
+    <p>您的密码输入有误</p>
+<% end %>
+
+<br><br><br>
+<p><%= link_to '返回主页', :controller => 'students', :action => 'index' %></p>

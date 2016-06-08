@@ -1,0 +1,10 @@
+<%= form_for @student, :url => { :controller => 'students', :action => 'verify2', :id=>@student } do |f| %>
+
+  <div class="newp">
+    <%= f.label :backup, "请输入您的密码:" %>
+    <%= f.text_field :backup %>
+  </div><br><br><br>
+  <%= f.submit "确认" %>
+<% end %>
+<br><br><br>
+<p><%= link_to '返回主页', :controller => 'students', :action => 'index' %></p>

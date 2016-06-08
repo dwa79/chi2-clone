@@ -24,5 +24,5 @@ function baidu(){
 	window.open("http://www.baidu.com/");
 }
 function dev(){
-    window.alert("Developer Info: \nName: Di Wang(Eddie)\nCurrently studying at: Simon Fraser University\nEmail: dwa79@sfu.ca\nStudent Number: 301257741\nTel: 778-892-3858(Canada)\n\nFeel free to contact me if you have further questions!\n\n");
+    window.alert("开发者信息:\nEmail: theskyrider@qq.com\n\nFeel free to contact me if you have further questions!\n\n");
 }

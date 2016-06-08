@@ -1,5 +1,5 @@
 <h1>学生资料分享库 v2.0</h1>
-
+<p>2016-06-08之前创建的账号密码默认为admin</p>
 
 <div>
     <button type="button" class="button2" <%= link_to "百度", "",:onclick=>"baidu();" %></button>
@@ -18,7 +18,7 @@
     <tr>
         <td style="font-size:22px;color:<%= s.color %>"><%= s.name %></td>
         <td><%= link_to '查看他/她的资料', :controller => 'students', :action => 'show', :id => s %></td>
-        <td><%= link_to '更改', :controller => 'students', :action => 'edit', :id => s %></td>
+        <td><%= link_to '更改', :controller => 'students', :action => 'pswd', :id => s %></td>
 
 
     </tr>

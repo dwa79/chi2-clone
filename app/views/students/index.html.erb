@@ -1,4 +1,4 @@
-<h1>学生资料分享库 v1.8</h1>
+<h1>学生资料分享库 v2.0</h1>
 
 
 <div>
@@ -20,6 +20,7 @@
         <td><%= link_to '查看他/她的资料', :controller => 'students', :action => 'show', :id => s %></td>
         <td><%= link_to '更改', :controller => 'students', :action => 'edit', :id => s %></td>
 
+
     </tr>
    
 <% end %>
@@ -33,6 +34,7 @@
 <% @w=0 %>
 <% @ratio=0 %>
 <% @students.each do |d| %>
+
     <% if d.weight.present? && d.height.present? %>
         <% @h=@h + d.height %>
         <% @w=@w + d.weight %>

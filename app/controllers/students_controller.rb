@@ -25,6 +25,34 @@ class StudentsController < ApplicationController
         @student = Student.new
     end
     
+    #get /students/pswd/:id
+    def pswd
+        @student = Student.find(params[:id])
+        
+        @pw=@student.password
+    end
+    
+    #get /students/pswd2/:id
+    def pswd2
+        @student = Student.find(params[:id])
+        
+        @pw=@student.password
+    end
+    
+    #get /students/veri/:id
+    def veri
+        @student = Student.find(params[:id])
+    
+        @pw=@student.password
+    end
+    
+    #get /students/veri2/:id
+    def veri2
+        @student = Student.find(params[:id])
+    
+        @pw=@student.password
+    end
+    
     #post /students/create
     def create
         @student = Student.new( student_params)
@@ -43,6 +71,24 @@ class StudentsController < ApplicationController
         redirect_to :action => :show, :id => @student
     end
     
+    #verify the user before editing
+    def verify
+        @student = Student.find(params[:id])
+        
+        @student.update(student_params)
+        
+        redirect_to :action => :veri, :id => @student
+    end
+    
+    #verify the user before deleting
+    def verify2
+        @student = Student.find(params[:id])
+        
+        @student.update(student_params)
+        
+        redirect_to :action => :veri2, :id => @student
+    end
+    
     #get /students/destroy/:id
     def destroy
         @student = Student.find(params[:id])
@@ -55,6 +101,6 @@ class StudentsController < ApplicationController
     
     private
     def student_params
-        params.require(:student).permit(:name, :weight, :height, :color, :gpa, :description, :sex)
+        params.require(:student).permit(:name, :weight, :height, :color, :gpa, :description, :sex, :password, :backup)
     end
 end

@@ -1,4 +1,4 @@
-<h2><%= @student.name %>----个人信息</h2>
+<h2><%= @student.name %>----个人信息(ID:<%= @student.id %>)</h2>
 
 
 <table style="border: 1px solid black;border-collapse: collapse;width: 98.5%;">
@@ -18,10 +18,14 @@
 				<td><%= @student.color %></td>
 				<td><%= @student.gpa %></td>
 				<td><%= @student.sex %></td>
-			    <td><%= simple_format(@student.description) %></td>
+			  <td><%= simple_format(@student.description) %></td>
 				
 			</tr>
 </table>
+<h5>您的状态及备忘录：</h5>
+<div></div>
+  <p><%= simple_format(@student.status) %></p>
+</div>
 <% @count=0 %>
 
 <% if @student.weight.blank? %>
@@ -50,7 +54,7 @@
 
 <% end %> 
 <% if @count==6 %>
-  <h4>你除了姓名啥都没输啊哥门儿！这有毛用啊</h4>
+  
   <%= link_to '补充完整您的信息', :controller => 'students', :action => 'edit', :id => @student.id %>
   <% end %> 
   

@@ -24,5 +24,5 @@ function baidu(){
 	window.open("http://www.baidu.com/");
 }
 function dev(){
-    window.alert("开发者信息:\nEmail: theskyrider@qq.com\n\nFeel free to contact me if you have further questions!\n\n");
+    window.alert("开发者信息:\nEmail: theskyrider@qq.com\n\n若有问题请联系我!\n\n");
 }

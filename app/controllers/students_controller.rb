@@ -6,6 +6,17 @@ class StudentsController < ApplicationController
 
     end
     
+    def secret_engine
+        @students = Student.all
+
+    end
+    
+    def edit_secret_engine
+        @student = Student.find(params[:id])
+        
+        @page_title = @student.name
+    end
+    
     #get /students/show/:id
     def show
         @student = Student.find(params[:id])
@@ -101,6 +112,6 @@ class StudentsController < ApplicationController
     
     private
     def student_params
-        params.require(:student).permit(:name, :weight, :height, :color, :gpa, :description, :sex, :password, :backup)
+        params.require(:student).permit(:name, :weight, :height, :color, :gpa, :description, :sex, :password, :backup, :status)
     end
 end
